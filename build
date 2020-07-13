@@ -51,20 +51,20 @@ select_boards()
 
     boards=("orangepir1" "orangepizero" "orangepipc" "orangepipcplus" "orangepiplus2e" "orangepione" "orangepilite" "orangepiplus" "orangepizeroplus2h3" "orangepizeroplus" "orangepipc2" "orangepiprime" "orangepizeroplus2h5" "orangepiwin" "orangepiwinplus" "orangepi3" "orangepilite2" "orangepioneplus" "orangepi4" "orangepirk3399")
 
-    if [[ -f /etc/orangepi-release ]]; then 
+#    if [[ -f /etc/orangepi-release ]]; then 
 
-	source /etc/orangepi-release
+#	source /etc/orangepi-release
 
-    elif [[ -f /etc/armbian-release ]]; then
+#    elif [[ -f /etc/armbian-release ]]; then
 
-	source /etc/armbian-release
+#	source /etc/armbian-release
 
-	[[ $BOARD == orangepi-r1 ]] && BOARD=orangepir1
-	[[ $BOARD == orangepi-rk3399 ]] && BOARD=orangepirk3399
-	[[ $BOARD == orangepizeroplus2-h3 ]] && BOARD=orangepizeroplus2h3
-	[[ $BOARD == orangepizeroplus2-h5 ]] && BOARD=orangepizeroplus2h5
+#	[[ $BOARD == orangepi-r1 ]] && BOARD=orangepir1
+#	[[ $BOARD == orangepi-rk3399 ]] && BOARD=orangepirk3399
+#	[[ $BOARD == orangepizeroplus2-h3 ]] && BOARD=orangepizeroplus2h3
+#	[[ $BOARD == orangepizeroplus2-h5 ]] && BOARD=orangepizeroplus2h5
 
-    else
+#   else
 
 	printf "All available boards:\n"
     	for var in ${boards[@]} ; do
@@ -85,7 +85,7 @@ select_boards()
         	fi
         	printf "Invalid input ...\n"
     	done
-    fi
+#    fi
 
 	[[ $BOARD == orangepir1 ]] && BOARD=orangepir1-h2
 	[[ $BOARD == orangepizero ]] && BOARD=orangepizero-h2
